@@ -3,6 +3,11 @@
 
 #include <stdio.h> // Biblioteca padrão de entrada e saída
 
+int main(){ // Descrição do projeto : Este código é uma implementação simples de um jogo de cartas chamado "Super Trunfo" em C.
+
+
+#include <stdio.h> // Biblioteca padrão de entrada e saída
+
 int main(){ 
 
 // Carta 1:
@@ -19,11 +24,11 @@ int main(){
 char estado1; 
 char codigo1[50]; 
 char nomeCidade1[50]; 
-int populacao1; 
+unsigned long int populacao1; 
 float area1; 
 float pib1; 
 int pontosTuristicos1; 
-float densidadepopulacional, pibpercapita;
+float densidadepopulacional, pibpercapita, superPoder1;
 printf("\n--faça a primeira carta--\n");
 printf("Digite o estado (A-H): "); 
 scanf("%c", &estado1); 
@@ -42,6 +47,7 @@ scanf("%d", &pontosTuristicos1);
 
 densidadepopulacional = populacao1 / area1;
 pibpercapita = (float) pib1 * 1000000000 / populacao1;
+superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + pibpercapita + (1 / densidadepopulacional);
 
 // Carta 2:
 
@@ -58,11 +64,11 @@ pibpercapita = (float) pib1 * 1000000000 / populacao1;
 char estado2; 
 char codigo2[50]; 
 char nomeCidade2[50]; 
-int populacao2; 
+unsigned long int populacao2; 
 float area2; 
 float pib2; 
 int pontosTuristicos2; 
-float densidadepopulacional2, pibpercapita2;
+float densidadepopulacional2, pibpercapita2, superPoder2;
 
 printf("\n--faça a segunda carta--\n");
 printf("Digite o estado (A-H): "); 
@@ -108,6 +114,46 @@ printf("PIB: %.2f bilhões de reais\n", pib2);
 printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
 printf("Densidade Populacional: %.2f habitantes/km²\n", densidadepopulacional2);
 printf("PIB per capita: %.2f reais\n", pibpercapita2);
+printf("--------------\n\n");
+
+// Comparação de Cartas:
+
+printf("\n--- COMPARAÇÃO DE CARTAS ---\n");
+
+if (populacao1 > populacao2)
+    printf("População: Carta 1 venceu (1)\n");
+else
+    printf("População: Carta 2 venceu (0)\n");
+
+if (area1 > area2)
+    printf("Área: Carta 1 venceu (1)\n");
+else
+    printf("Área: Carta 2 venceu (0)\n");
+
+if (pib1 > pib2)
+    printf("PIB: Carta 1 venceu (1)\n");
+else
+    printf("PIB: Carta 2 venceu (0)\n");
+
+if (pontosTuristicos1 > pontosTuristicos2)
+    printf("Pontos Turísticos: Carta 1 venceu (1)\n");
+else
+    printf("Pontos Turísticos: Carta 2 venceu (0)\n");
+
+if (densidadepopulacional < densidadepopulacional2)
+    printf("Densidade Populacional: Carta 1 venceu (1)\n");
+else
+    printf("Densidade Populacional: Carta 2 venceu (0)\n");
+
+if (pibpercapita > pibpercapita2)
+    printf("PIB per Capita: Carta 1 venceu (1)\n");
+else
+    printf("PIB per Capita: Carta 2 venceu (0)\n");
+
+if (superPoder1 > superPoder2)
+    printf("Super Poder: Carta 1 venceu (1)\n");
+else
+    printf("Super Poder: Carta 2 venceu (0)\n");
 printf("--------------\n\n");
 
 return 0; // Retorna 0 para indicar que o programa terminou com sucesso
