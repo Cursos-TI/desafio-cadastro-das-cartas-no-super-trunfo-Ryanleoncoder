@@ -1,10 +1,5 @@
 // Descrição do projeto : Este código é uma implementação simples de um jogo de cartas chamado "Super Trunfo" em C.
-// nivel aventureiro
-
-#include <stdio.h> // Biblioteca padrão de entrada e saída
-
-int main(){ // Descrição do projeto : Este código é uma implementação simples de um jogo de cartas chamado "Super Trunfo" em C.
-
+// nivel mestre
 
 #include <stdio.h> // Biblioteca padrão de entrada e saída
 
