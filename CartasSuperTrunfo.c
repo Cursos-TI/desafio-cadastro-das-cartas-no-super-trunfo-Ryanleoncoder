@@ -116,12 +116,12 @@ int main() {
 
     // --- Comparação ---
     printf("\n--- COMPARAÇÃO DE CARTAS ---\n");
-    printf("Comparações entre as cartas:\n");
+    printf("===== COMPARAÇÃO DE CARTAS =====\n");
     printf("População: %d\n", populacao1 > populacao2);
     printf("Área: %d\n", area1 > area2);
     printf("PIB: %d\n", pib1 > pib2);
-    printf("Densidade Populacional: %d\n", densidadePopulacional1 > densidadePopulacional2);
-    printf("PIB per capita: %d\n", pibPerCapita1 > pibPerCapita2);
+    printf("Densidade Populacional: %d\n", densidadePopulacional1 < densidadePopulacional2); // Correção: menor vence
+    printf("Super Poder: %d\n", superPoder1 > superPoder2); // Adicionado
 
     printf("--------------\n\n");
     return 0;
